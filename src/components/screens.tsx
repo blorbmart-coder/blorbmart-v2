@@ -462,7 +462,7 @@ const RIDER_TABS: Tab[] = [
 ]
 
 const RIDER_JOBS = [
-  { from: "Mama T's Kitchen", to: 'Hall 3, Room 214', km: '1.2 km', earn: '₦480' },
+  { from: "Mama T's Kitchen", to: 'Hall 3, Room 214', km: '1.2 km', earn: '₦540' },
   { from: 'Shawarma Spot', to: 'Faculty of Science', km: '0.8 km', earn: '₦450' },
 ]
 

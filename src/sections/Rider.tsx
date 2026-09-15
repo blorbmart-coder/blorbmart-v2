@@ -142,7 +142,7 @@ export function Rider() {
             </div>
 
             <Reveal className="relative mx-auto w-full max-w-[19rem] sm:max-w-[20.5rem]">
-              <Phone screen="rider" label="The Blorbmart Rider app, online and receiving a new delivery job worth ₦480.">
+              <Phone screen="rider" label="The Blorbmart Rider app, online and receiving a new delivery job worth ₦540.">
                 <RiderScreen />
               </Phone>
             </Reveal>

@@ -68,7 +68,7 @@ export const CAMPUSES = [
 ] as const
 
 /** The figure the rider app's own earnings calculator uses. */
-export const RIDER_RATE = 480
+export const RIDER_RATE = 540
 
 export type Member = {
   /** Also the photo filename: drop `src/assets/team/<slug>.jpg` and it appears. */
