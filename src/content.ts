@@ -5,21 +5,44 @@
  */
 
 export const LINKS = {
-  /** The buyer web app (installable PWA). */
-  webApp: 'https://blorbmart-web.vercel.app',
+  /*
+   * Blorbmart's one domain is blorbmart.com.ng: this site on www (the bare
+   * domain redirects there), the rider and vendor apps on their subdomains.
+   */
+  /**
+   * The buyer web app (installable PWA). It has no blorbmart.com.ng address
+   * yet. blorbmart.vercel.app is the build kept current; blorbmart-web.vercel.app
+   * serves an older one.
+   */
+  webApp: 'https://blorbmart.vercel.app',
   playStore: 'https://play.google.com/store/apps/details?id=ng.com.blorbmart.app',
   vendorPlayStore: 'https://play.google.com/store/apps/details?id=ng.com.blorbmart.vendor',
-  vendorWeb: 'https://blorbmart-vendor.vercel.app',
-  riderApp: 'https://blorbmart-rider.vercel.app',
+  vendorWeb: 'https://vendor.blorbmart.com.ng',
+  riderApp: 'https://rider.blorbmart.com.ng',
   whatsapp: 'https://wa.me/2349022594853',
-  email: 'support@blorbmart.shop',
-  /*
-   * Legal pages. Neither exists yet — /terms on the current site serves the
-   * homepage, and the blorbmart.com/terms the apps link to does not resolve.
-   * The footer shows these links only once they are filled in.
-   */
-  terms: '' as string,
-  privacy: '' as string,
+  email: 'blorbmarthelpdesk@gmail.com',
+  /* Legal pages, served by this site from terms.html, privacy.html and delete-account.html. */
+  terms: '/terms',
+  privacy: '/privacy',
+  deleteAccount: '/delete-account',
+} as const
+
+/*
+ * The facts the legal pages rest on. The data practices they describe were
+ * checked against the apps and backend on 2026-09-15, and the owner confirmed
+ * the company name the same day.
+ */
+export const LEGAL = {
+  company: 'Blorbmart Limited',
+  /** Registered office. The pages print it only once it is filled in. */
+  address: '' as string,
+  /** CAC registration number, e.g. "RC 1234567". Printed only once filled in. */
+  rc: '' as string,
+  updated: '15 September 2026',
+  /** Days a verified deletion request may take. */
+  deletionDays: 14,
+  /** Years payment and order records outlive a deleted account (CAMA 2020, s. 375). */
+  recordYears: 6,
 } as const
 
 export const SOCIALS = [

@@ -23,7 +23,7 @@ const COLUMNS: { title: string; links: Link[] }[] = [
     title: 'Earn with us',
     links: [
       { label: 'Become a rider', href: LINKS.riderApp },
-      { label: 'Sell on Blorbmart', href: LINKS.vendorPlayStore },
+      { label: 'Sell on Blorbmart', href: LINKS.vendorWeb },
       { label: 'Host an event', href: '#events' },
       { label: 'Campus ambassador', href: mailto('Campus ambassador application') },
     ],
@@ -43,10 +43,14 @@ const COLUMNS: { title: string; links: Link[] }[] = [
       { label: 'Chat on WhatsApp', href: LINKS.whatsapp },
       { label: 'Email support', href: `mailto:${LINKS.email}` },
       { label: 'FAQ', href: '#faq' },
-      ...(LINKS.terms ? [{ label: 'Terms of service', href: LINKS.terms }] : []),
-      ...(LINKS.privacy ? [{ label: 'Privacy policy', href: LINKS.privacy }] : []),
     ],
   },
+]
+
+const LEGAL_LINKS: Link[] = [
+  { label: 'Terms of use', href: LINKS.terms },
+  { label: 'Privacy policy', href: LINKS.privacy },
+  { label: 'Delete your account', href: LINKS.deleteAccount },
 ]
 
 type State = 'idle' | 'loading' | 'done' | 'mail' | 'invalid' | 'error'
@@ -259,8 +263,19 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-8 flex flex-col gap-4 border-t border-white/10 py-7 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-4 border-t border-white/10 py-7 text-sm text-white/55 lg:flex-row lg:items-center lg:justify-between">
           <p>© {new Date().getFullYear()} Blorbmart. All rights reserved.</p>
+          <nav aria-label="Legal">
+            <ul className="flex flex-wrap gap-x-5 gap-y-2">
+              {LEGAL_LINKS.map((l) => (
+                <li key={l.label}>
+                  <a href={l.href} className="font-semibold text-white/75 transition-colors hover:text-volt">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
           <p className="flex items-center gap-1.5">
             Made with <Heart className="h-4 w-4 fill-ember text-ember" aria-label="love" /> on campus in Nigeria
           </p>

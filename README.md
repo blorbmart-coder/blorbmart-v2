@@ -2,7 +2,8 @@
 
 The public marketing site for Blorbmart — food delivery, bills, event tickets,
 rider and vendor sign-ups, and the team. React 19 + Vite + Tailwind v4 +
-Framer Motion. It is a single static page; it talks to no backend.
+Framer Motion. It is a static site — the landing page plus three legal pages —
+and talks to no backend.
 
 ```bash
 npm install
@@ -18,8 +19,23 @@ Almost everything that is a fact rather than design lives in `src/content.ts`:
 - **Team** — names, roles, and each person's own social links. A network left
   empty links to Blorbmart's account instead (and says so to screen readers).
 - **Campuses** — mirrors `Blorbmart-backend/services/universities.js`.
-- **Legal** — `terms` and `privacy` are empty until real pages exist; the footer
-  only shows those links once they are filled in.
+- **Legal** — `LEGAL` holds the company name, registration number and address
+  (printed only once filled in), the "last updated" date, and the deletion and
+  record-keeping periods the legal pages quote.
+
+## Legal pages
+
+`/terms`, `/privacy` and `/delete-account` are separate HTML files
+(`terms.html`, `privacy.html`, `delete-account.html`) that share one React
+entry, `src/legal/main.tsx`. Vercel serves them without the `.html` because of
+`cleanUrls` in `vercel.json` — keep that file if you move the project. The
+wording lives in `src/legal/terms.tsx`, `privacy.tsx` and `deleteAccount.tsx`.
+
+The text is a draft written from what the apps actually do — which data each
+one collects, and which providers receive it. Have a lawyer review it before
+relying on it, and update the privacy policy whenever an app starts
+collecting something new or changes provider. `/delete-account` is the URL to
+give Google Play as the "Delete account URL".
 
 ## Drop-in images
 
@@ -42,6 +58,7 @@ no sign-up is silently lost.
 
 Import the repo into Vercel as a Vite project (build `npm run build`, output
 `dist`). The share card (`public/og.png`) and canonical URL assume the site is
-served at `https://www.blorbmart.shop/`.
+served at `https://www.blorbmart.com.ng/` — Blorbmart's only domain. The bare
+`blorbmart.com.ng` redirects there.
 
 Food photography is from Unsplash (free under the Unsplash License).

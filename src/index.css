@@ -98,6 +98,158 @@
   }
 }
 
+/*
+ * Running text on the legal pages. Preflight strips list and link styling,
+ * and those pages are mostly lists and links.
+ */
+@layer components {
+  .legal-prose {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: #2a353c;
+  }
+
+  .legal-prose > * + * {
+    margin-top: 1rem;
+  }
+
+  .legal-prose h3 {
+    margin-top: 2rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--color-ink);
+  }
+
+  .legal-prose > h3:first-child {
+    margin-top: 0;
+  }
+
+  .legal-prose h3 + * {
+    margin-top: 0.6rem;
+  }
+
+  .legal-prose ul,
+  .legal-prose ol {
+    padding-left: 1.35rem;
+  }
+
+  .legal-prose ul {
+    list-style: disc;
+  }
+
+  .legal-prose ol {
+    list-style: decimal;
+  }
+
+  .legal-prose li + li {
+    margin-top: 0.55rem;
+  }
+
+  .legal-prose li::marker {
+    color: var(--color-iris);
+  }
+
+  .legal-prose strong {
+    font-weight: 700;
+    color: var(--color-ink);
+  }
+
+  .legal-prose a {
+    font-weight: 600;
+    color: var(--color-iris-deep);
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+  }
+
+  .legal-prose a:hover {
+    color: var(--color-iris);
+  }
+
+  .legal-prose table {
+    width: 100%;
+    min-width: 32rem;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .legal-prose th,
+  .legal-prose td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .legal-prose th {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-mute);
+    border-bottom: 1px solid rgb(10 15 18 / 0.1);
+  }
+
+  .legal-prose tbody tr + tr td {
+    border-top: 1px solid rgb(10 15 18 / 0.07);
+  }
+
+  .legal-prose td:first-child {
+    width: 42%;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+
+  /* On a phone two columns don't fit, so each row becomes a small card: what
+     the data is for, then its column's name as a label, then the answer. */
+  @media (max-width: 639px) {
+    .legal-prose table {
+      min-width: 0;
+    }
+
+    .legal-prose thead {
+      display: none;
+    }
+
+    .legal-prose table,
+    .legal-prose tbody,
+    .legal-prose tr,
+    .legal-prose td {
+      display: block;
+    }
+
+    .legal-prose td:first-child {
+      width: auto;
+      padding-bottom: 0.35rem;
+    }
+
+    .legal-prose td + td {
+      padding-top: 0;
+    }
+
+    .legal-prose td[data-label]::before {
+      content: attr(data-label);
+      display: block;
+      margin-bottom: 0.1rem;
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-mute);
+    }
+
+    .legal-prose tbody tr + tr td {
+      border-top: 0;
+    }
+
+    .legal-prose tbody tr + tr {
+      border-top: 1px solid rgb(10 15 18 / 0.07);
+    }
+  }
+}
+
 @layer utilities {
   .container-x {
     width: 100%;

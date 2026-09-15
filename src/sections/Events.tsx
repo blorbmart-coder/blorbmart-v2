@@ -223,7 +223,7 @@ export function Events() {
                 </p>
               </div>
               <a
-                {...linkProps(LINKS.vendorPlayStore)}
+                {...linkProps(LINKS.vendorWeb)}
                 className="inline-flex min-h-11 shrink-0 items-center gap-1.5 text-sm font-bold text-volt hover:underline"
               >
                 Sell tickets <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
