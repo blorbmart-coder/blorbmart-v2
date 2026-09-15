@@ -16,6 +16,7 @@ const ssr = resolve('dist-ssr')
 
 const PAGES = [
   ['index.html', 'home'],
+  ['careers.html', 'careers'],
   ['terms.html', 'terms'],
   ['privacy.html', 'privacy'],
   ['delete-account.html', 'delete-account'],

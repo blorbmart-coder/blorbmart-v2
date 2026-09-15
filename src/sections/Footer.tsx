@@ -33,7 +33,7 @@ const COLUMNS: { title: string; links: Link[] }[] = [
     title: 'Company',
     links: [
       { label: 'Our team', href: '#team' },
-      { label: 'Careers', href: '#careers' },
+      { label: 'Careers', href: LINKS.careers },
       { label: 'Newsletter', href: '#newsletter' },
       { label: 'Press & partnerships', href: mailto('Press & partnerships') },
     ],
@@ -170,7 +170,7 @@ function Careers() {
       </h2>
       <p className="mt-3 max-w-md leading-relaxed text-void/75">
         We're growing campus by campus, and we're always keen to meet people who love solving real problems for real
-        students.
+        students. Every open role is listed on our careers page.
       </p>
       <ul className="mt-6 flex flex-wrap gap-2" aria-label="Areas we hire in">
         {['Campus ambassadors', 'Riders', 'Content & design', 'Engineering', 'Operations'].map((r) => (
@@ -179,14 +179,14 @@ function Careers() {
           </li>
         ))}
       </ul>
-      <Button
-        href={mailto('Careers at Blorbmart', 'Hi Blorbmart team,\n\nI would love to join you as ...\n\n(Attach your CV or portfolio.)')}
-        variant="ink"
-        size="lg"
-        className="mt-8"
-      >
-        Send us your CV
-      </Button>
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <Button href={LINKS.careers} variant="ink" size="lg">
+          See open roles
+        </Button>
+        <Button href={`${LINKS.careers}#apply`} variant="ghost-dark" size="lg" arrow={false}>
+          Send us your CV
+        </Button>
+      </div>
     </div>
   )
 }

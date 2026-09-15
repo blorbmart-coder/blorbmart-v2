@@ -20,6 +20,8 @@ export const LINKS = {
   riderApp: 'https://rider.blorbmart.com.ng',
   whatsapp: 'https://wa.me/2349022594853',
   email: 'blorbmarthelpdesk@gmail.com',
+  /** Open roles and the CV form, served by this site from careers.html. */
+  careers: '/careers',
   /* Legal pages, served by this site from terms.html, privacy.html and delete-account.html. */
   terms: '/terms',
   privacy: '/privacy',

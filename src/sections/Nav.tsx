@@ -14,6 +14,8 @@ const NAV = [
   { href: '#ride', label: 'Ride' },
   { href: '#sell', label: 'Sell' },
   { href: '#team', label: 'Team' },
+  // A page of its own rather than a section of this one.
+  { href: LINKS.careers, label: 'Careers' },
 ]
 
 export function Nav() {

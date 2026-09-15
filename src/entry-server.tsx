@@ -7,11 +7,16 @@
 import { StrictMode } from 'react'
 import { renderToString } from 'react-dom/server'
 import App from './App'
+import { CareersPage } from './careers/CareersPage'
 import type { LegalSlug } from './legal/docs'
 import { LegalPage } from './legal/LegalPage'
 
-export type Page = 'home' | LegalSlug
+export type Page = 'home' | 'careers' | LegalSlug
 
 export function render(page: Page): string {
-  return renderToString(<StrictMode>{page === 'home' ? <App /> : <LegalPage slug={page} />}</StrictMode>)
+  return renderToString(
+    <StrictMode>
+      {page === 'home' ? <App /> : page === 'careers' ? <CareersPage /> : <LegalPage slug={page} />}
+    </StrictMode>,
+  )
 }

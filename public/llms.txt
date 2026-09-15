@@ -20,6 +20,10 @@ Blorbmart is built by students for students. Food orders are delivered by studen
 - How do I sell on Blorbmart? Get Blorbmart Vendor on Google Play or use it on the web, set up your store and menu, and complete a quick verification.
 - Can I sell tickets for my event? Yes. Create the event in Blorbmart Vendor, set ticket tiers, and scan guests in at the door with the built-in QR scanner.
 
+## Careers
+
+- [Careers at Blorbmart](https://www.blorbmart.com.ng/careers): every open role, with the work type (onsite, remote or hybrid), location and employment type. Each role has its own page and its own application form. Candidates who do not see a role that fits can send a CV from the same page, and it is kept on file for future openings.
+
 ## Contact
 
 - Email: blorbmarthelpdesk@gmail.com
