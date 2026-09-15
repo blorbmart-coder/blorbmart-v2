@@ -1,0 +1,6 @@
+# www.blorbmart.com.ng — Blorbmart's public site.
+# Everything here is public, including to AI search crawlers.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.blorbmart.com.ng/sitemap.xml

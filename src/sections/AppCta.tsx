@@ -46,13 +46,19 @@ export function AppCta() {
               Get it on Google Play
             </Button>
             <Button href={LINKS.webApp} variant="ghost-light" size="lg">
-              Open the web app
+              Shop on the web
             </Button>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mx-auto mt-6 flex max-w-md items-start justify-center gap-2 text-sm leading-relaxed text-white/90 lg:mx-0 lg:justify-start">
               <Smartphone className="mt-0.5 h-4 w-4 shrink-0 text-volt" aria-hidden="true" />
-              On iPhone? Open the web app in Safari and tap Share → Add to Home Screen.
+              <span>
+                On iPhone? Open{' '}
+                <a href={LINKS.webApp} className="font-bold text-white underline decoration-volt underline-offset-4">
+                  {LINKS.webAppLabel}
+                </a>{' '}
+                in Safari and tap Share → Add to Home Screen.
+              </span>
             </p>
           </Reveal>
         </div>

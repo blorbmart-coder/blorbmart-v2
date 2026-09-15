@@ -7,14 +7,13 @@
 export const LINKS = {
   /*
    * Blorbmart's one domain is blorbmart.com.ng: this site on www (the bare
-   * domain redirects there), the rider and vendor apps on their subdomains.
+   * domain redirects there), and the shop, rider and vendor apps on their
+   * subdomains.
    */
-  /**
-   * The buyer web app (installable PWA). It has no blorbmart.com.ng address
-   * yet. blorbmart.vercel.app is the build kept current; blorbmart-web.vercel.app
-   * serves an older one.
-   */
-  webApp: 'https://blorbmart.vercel.app',
+  /** The buyer web app (installable PWA), where every "Order" button goes. */
+  webApp: 'https://shop.blorbmart.com.ng',
+  /** The same address without the scheme, for places that print it. */
+  webAppLabel: 'shop.blorbmart.com.ng',
   playStore: 'https://play.google.com/store/apps/details?id=ng.com.blorbmart.app',
   vendorPlayStore: 'https://play.google.com/store/apps/details?id=ng.com.blorbmart.vendor',
   vendorWeb: 'https://vendor.blorbmart.com.ng',

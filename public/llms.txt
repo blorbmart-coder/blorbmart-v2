@@ -1,0 +1,33 @@
+# Blorbmart
+
+> Blorbmart is a campus super-app in Nigeria, run by Blorbmart Limited. Students use it to order food from campus kitchens, buy airtime and data, pay electricity and TV bills, and buy event tickets. It is live at Osun State University (UNIOSUN, Osogbo), Ladoke Akintola University of Technology (LAUTECH, Ogbomoso), University of Nigeria (UNN, Nsukka) and Olabisi Onabanjo University (OOU, Ago-Iwoye). Bill payments work anywhere in Nigeria.
+
+Blorbmart is built by students for students. Food orders are delivered by student riders, who are paid the same day. Every order and bill comes with a receipt that can be verified by its QR code.
+
+## Apps
+
+- [Blorbmart shop](https://shop.blorbmart.com.ng/): the buyer web app. Order food from campus kitchens and pharmacies, pay bills, and buy event tickets in the browser; it installs to a phone's home screen like an app.
+- [Blorbmart on Google Play](https://play.google.com/store/apps/details?id=ng.com.blorbmart.app): the buyer app for Android.
+- [Blorbmart Rider](https://rider.blorbmart.com.ng/join): students sign up to deliver orders around campus between lectures and cash out to their bank the same day. Signing up is free.
+- [Blorbmart Vendor](https://vendor.blorbmart.com.ng/signup): kitchens, pharmacies and event organisers run their store, menu, orders, tickets and payouts. Also on [Google Play](https://play.google.com/store/apps/details?id=ng.com.blorbmart.vendor).
+
+## Frequently asked questions
+
+- Which campuses is Blorbmart on? UNIOSUN (Osogbo), LAUTECH (Ogbomoso), UNN (Nsukka) and OOU (Ago-Iwoye). More campuses are on the way, and bill payments already work anywhere in Nigeria.
+- How do I order food? Open the Blorbmart app or the web app at shop.blorbmart.com.ng, pick a kitchen on your campus, add your meal and pay, then track your rider live.
+- Can I use Blorbmart if my school isn't listed? Yes. Choose "My university is not listed" when you sign up to pay for airtime, data, electricity and TV straight away. The food marketplace opens when Blorbmart reaches your school.
+- How do I become a rider? Sign up on Blorbmart Rider. It is free and takes about two minutes. Once approved, go online whenever you are free.
+- How do I sell on Blorbmart? Get Blorbmart Vendor on Google Play or use it on the web, set up your store and menu, and complete a quick verification.
+- Can I sell tickets for my event? Yes. Create the event in Blorbmart Vendor, set ticket tiers, and scan guests in at the door with the built-in QR scanner.
+
+## Contact
+
+- Email: blorbmarthelpdesk@gmail.com
+- WhatsApp: +234 902 259 4853
+- Instagram, X and TikTok: @blorbmart
+
+## Policies
+
+- [Terms of use](https://www.blorbmart.com.ng/terms)
+- [Privacy policy](https://www.blorbmart.com.ng/privacy)
+- [Delete your account](https://www.blorbmart.com.ng/delete-account)

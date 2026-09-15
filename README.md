@@ -8,8 +8,26 @@ and talks to no backend.
 ```bash
 npm install
 npm run dev      # http://localhost:5176
-npm run build    # type-checks, then writes dist/
+npm run build    # type-checks, builds, then pre-renders every page into dist/
+npm run indexnow # after a deploy: asks Bing & co. to recrawl all four sites
 ```
+
+## SEO
+
+- **Pre-rendering.** `npm run build` also builds `src/entry-server.tsx` for
+  Node and runs `scripts/prerender.mjs`, which writes each page's markup into
+  its `#root`. Crawlers and link previews that run no JavaScript (Bing, AI
+  crawlers, WhatsApp) read the whole page; the browser hydrates it.
+  Anything a component reads from `window` or `document` must stay inside an
+  effect or an event handler, or the build fails.
+- **Structured data.** `index.html` holds the company graph (Organization,
+  WebSite, the apps). Its `@id`s (`https://www.blorbmart.com.ng/#organization`)
+  are referenced by the shop, rider and vendor apps, so keep them stable. The
+  FAQ section renders its own `FAQPage`.
+- **Crawl files.** `public/robots.txt`, `public/sitemap.xml` (bump `lastmod`
+  when a page changes) and `public/llms.txt`, a plain summary for AI search.
+- **IndexNow.** `public/4c1f8e2b9a7d4e3f8b6a5c2d1e0f9a7b.txt` is the key file;
+  the shop, rider and vendor apps serve the same one.
 
 ## Editing content
 

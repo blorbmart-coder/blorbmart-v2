@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import '../index.css'
 import { isLegalSlug } from './docs'
 import { LegalPage } from './LegalPage'
@@ -10,8 +10,12 @@ const root = document.getElementById('root')!
 const slug = root.dataset.page
 if (!isLegalSlug(slug)) throw new Error(`No legal page called "${slug}"`)
 
-createRoot(root).render(
+const page = (
   <StrictMode>
     <LegalPage slug={slug} />
-  </StrictMode>,
+  </StrictMode>
 )
+
+// Pre-rendered by the build (scripts/prerender.mjs); empty under the dev server.
+if (root.hasChildNodes()) hydrateRoot(root, page)
+else createRoot(root).render(page)

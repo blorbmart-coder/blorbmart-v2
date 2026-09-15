@@ -14,6 +14,7 @@ const COLUMNS: { title: string; links: Link[] }[] = [
     title: 'Services',
     links: [
       { label: 'Order food', href: LINKS.webApp },
+      { label: 'Shop on the web', href: LINKS.webApp },
       { label: 'Bills & top-ups', href: '#bills' },
       { label: 'Event tickets', href: '#events' },
       { label: 'Track an order', href: LINKS.webApp },

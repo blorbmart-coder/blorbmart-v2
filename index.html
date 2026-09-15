@@ -1,13 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-NG">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Blorbmart — Food, bills &amp; event tickets for your campus</title>
+    <title>Blorbmart — Campus food delivery, bills &amp; event tickets</title>
     <meta
       name="description"
-      content="Order hot food from the best kitchens on campus, top up airtime and data, pay for power and TV, and buy event tickets — all in one app. Now at UNIOSUN, LAUTECH, UNN and OOU."
+      content="Order food from campus kitchens, buy airtime and data, pay for power and TV, and get event tickets in one app. Live at UNIOSUN, LAUTECH, UNN and OOU."
     />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Blorbmart Limited" />
     <meta name="theme-color" content="#0A0F12" />
     <link rel="canonical" href="https://www.blorbmart.com.ng/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -15,6 +17,7 @@
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Blorbmart" />
+    <meta property="og:locale" content="en_NG" />
     <meta property="og:url" content="https://www.blorbmart.com.ng/" />
     <meta property="og:title" content="Blorbmart — Your campus, delivered." />
     <meta
@@ -24,6 +27,7 @@
     <meta property="og:image" content="https://www.blorbmart.com.ng/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Blorbmart — Your campus, delivered. Food, bills and event tickets at UNIOSUN, LAUTECH, UNN and OOU." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@blorbmart" />
     <meta name="twitter:title" content="Blorbmart — Your campus, delivered." />
@@ -32,30 +36,174 @@
       content="Hot food, airtime, data, power, TV and event tickets — one app, built by students for students."
     />
     <meta name="twitter:image" content="https://www.blorbmart.com.ng/og.png" />
+    <meta name="twitter:image:alt" content="Blorbmart — Your campus, delivered." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://shop.blorbmart.com.ng" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     />
 
+    <!--
+      One graph for the whole company. The shop, rider and vendor apps point
+      back at #organization by @id, so search engines read four sites as one
+      business. The FAQ's FAQPage is rendered by the FAQ section itself.
+    -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Blorbmart",
-        "legalName": "Blorbmart Limited",
-        "url": "https://www.blorbmart.com.ng/",
-        "logo": "https://www.blorbmart.com.ng/apple-touch-icon.png",
-        "description": "The campus super-app for food delivery, bill payments and event tickets in Nigeria.",
-        "email": "blorbmarthelpdesk@gmail.com",
-        "sameAs": [
-          "https://instagram.com/blorbmart",
-          "https://x.com/blorbmart",
-          "https://www.tiktok.com/@blorbmart",
-          "https://www.linkedin.com/company/blorbmart",
-          "https://play.google.com/store/apps/details?id=ng.com.blorbmart.app"
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.blorbmart.com.ng/#organization",
+            "name": "Blorbmart",
+            "legalName": "Blorbmart Limited",
+            "url": "https://www.blorbmart.com.ng/",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://www.blorbmart.com.ng/#logo",
+              "url": "https://www.blorbmart.com.ng/apple-touch-icon.png"
+            },
+            "image": "https://www.blorbmart.com.ng/og.png",
+            "description": "The campus super-app for food delivery, bill payments and event tickets in Nigeria.",
+            "slogan": "Your campus, delivered.",
+            "email": "blorbmarthelpdesk@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Osogbo",
+              "addressRegion": "Osun",
+              "addressCountry": "NG"
+            },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "email": "blorbmarthelpdesk@gmail.com",
+                "telephone": "+2349022594853",
+                "areaServed": "NG",
+                "availableLanguage": "English"
+              }
+            ],
+            "areaServed": [
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "Osun State University (UNIOSUN)",
+                "address": { "@type": "PostalAddress", "addressLocality": "Osogbo", "addressRegion": "Osun", "addressCountry": "NG" }
+              },
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "Ladoke Akintola University of Technology (LAUTECH)",
+                "address": { "@type": "PostalAddress", "addressLocality": "Ogbomoso", "addressRegion": "Oyo", "addressCountry": "NG" }
+              },
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Nigeria, Nsukka (UNN)",
+                "address": { "@type": "PostalAddress", "addressLocality": "Nsukka", "addressRegion": "Enugu", "addressCountry": "NG" }
+              },
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "Olabisi Onabanjo University (OOU)",
+                "address": { "@type": "PostalAddress", "addressLocality": "Ago-Iwoye", "addressRegion": "Ogun", "addressCountry": "NG" }
+              },
+              { "@type": "Country", "name": "Nigeria" }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Blorbmart services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Campus food delivery", "url": "https://shop.blorbmart.com.ng/" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Airtime and data top-up", "areaServed": "NG" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electricity bill payment", "areaServed": "NG" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "TV subscription payment", "areaServed": "NG" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Campus event tickets", "url": "https://shop.blorbmart.com.ng/events" } }
+              ]
+            },
+            "sameAs": [
+              "https://instagram.com/blorbmart",
+              "https://x.com/blorbmart",
+              "https://www.tiktok.com/@blorbmart",
+              "https://www.linkedin.com/company/blorbmart",
+              "https://play.google.com/store/apps/details?id=ng.com.blorbmart.app"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.blorbmart.com.ng/#website",
+            "url": "https://www.blorbmart.com.ng/",
+            "name": "Blorbmart",
+            "description": "Food delivery, bill payments and event tickets for Nigerian university campuses.",
+            "inLanguage": "en-NG",
+            "publisher": { "@id": "https://www.blorbmart.com.ng/#organization" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://www.blorbmart.com.ng/#webpage",
+            "url": "https://www.blorbmart.com.ng/",
+            "name": "Blorbmart — Campus food delivery, bills & event tickets",
+            "description": "Order food from campus kitchens, buy airtime and data, pay for power and TV, and get event tickets in one app. Live at UNIOSUN, LAUTECH, UNN and OOU.",
+            "inLanguage": "en-NG",
+            "isPartOf": { "@id": "https://www.blorbmart.com.ng/#website" },
+            "about": { "@id": "https://www.blorbmart.com.ng/#organization" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.blorbmart.com.ng/og.png", "width": 1200, "height": 630 }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://shop.blorbmart.com.ng/#app",
+            "name": "Blorbmart",
+            "url": "https://shop.blorbmart.com.ng/",
+            "description": "Order food, pay bills and buy event tickets in the browser. Installable on any phone.",
+            "applicationCategory": "ShoppingApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "NGN" },
+            "publisher": { "@id": "https://www.blorbmart.com.ng/#organization" }
+          },
+          {
+            "@type": "MobileApplication",
+            "@id": "https://www.blorbmart.com.ng/#android-app",
+            "name": "Blorbmart",
+            "url": "https://play.google.com/store/apps/details?id=ng.com.blorbmart.app",
+            "installUrl": "https://play.google.com/store/apps/details?id=ng.com.blorbmart.app",
+            "applicationCategory": "ShoppingApplication",
+            "operatingSystem": "Android",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "NGN" },
+            "publisher": { "@id": "https://www.blorbmart.com.ng/#organization" }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://rider.blorbmart.com.ng/#app",
+            "name": "Blorbmart Rider",
+            "url": "https://rider.blorbmart.com.ng/join",
+            "description": "Deliver Blorbmart orders around your campus between lectures and cash out the same day.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "NGN" },
+            "publisher": { "@id": "https://www.blorbmart.com.ng/#organization" }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://vendor.blorbmart.com.ng/#app",
+            "name": "Blorbmart Vendor",
+            "url": "https://vendor.blorbmart.com.ng/signup",
+            "description": "Run a campus kitchen, pharmacy or event on Blorbmart: menu, orders, tickets and payouts.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Any",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "NGN" },
+            "publisher": { "@id": "https://www.blorbmart.com.ng/#organization" }
+          },
+          {
+            "@type": "MobileApplication",
+            "@id": "https://www.blorbmart.com.ng/#android-vendor-app",
+            "name": "Blorbmart Vendor",
+            "url": "https://play.google.com/store/apps/details?id=ng.com.blorbmart.vendor",
+            "installUrl": "https://play.google.com/store/apps/details?id=ng.com.blorbmart.vendor",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Android",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "NGN" },
+            "publisher": { "@id": "https://www.blorbmart.com.ng/#organization" }
+          }
         ]
       }
     </script>
@@ -63,9 +211,13 @@
   <body>
     <div id="root"></div>
     <noscript>
-      Blorbmart — food delivery, bill payments and event tickets for Nigerian campuses. Order at
-      https://blorbmart.vercel.app or get the app on Google Play. Riders: https://rider.blorbmart.com.ng. Vendors:
-      https://vendor.blorbmart.com.ng.
+      <p>
+        Blorbmart — food delivery, bill payments and event tickets for Nigerian campuses. Order at
+        <a href="https://shop.blorbmart.com.ng">shop.blorbmart.com.ng</a> or get the app on
+        <a href="https://play.google.com/store/apps/details?id=ng.com.blorbmart.app">Google Play</a>. Riders:
+        <a href="https://rider.blorbmart.com.ng/join">rider.blorbmart.com.ng</a>. Vendors:
+        <a href="https://vendor.blorbmart.com.ng/signup">vendor.blorbmart.com.ng</a>.
+      </p>
     </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
