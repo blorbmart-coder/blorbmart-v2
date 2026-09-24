@@ -39,7 +39,7 @@ export const LEGAL = {
   address: '' as string,
   /** CAC registration number, e.g. "RC 1234567". Printed only once filled in. */
   rc: '' as string,
-  updated: '15 September 2026',
+  updated: '24 September 2026',
   /** Days a verified deletion request may take. */
   deletionDays: 14,
   /** Years payment and order records outlive a deleted account (CAMA 2020, s. 375). */

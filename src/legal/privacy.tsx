@@ -39,7 +39,8 @@ export const PRIVACY: LegalDoc = {
           <h3>Extra, if you are a vendor</h3>
           <ul>
             <li>Your business name, business email and phone, campus and store location.</li>
-            <li>Your menu, prices and product photos.</li>
+            <li>Your menu, prices and product photos. The Vendor app uses your camera only when you choose to take a product or store photo, or to scan an event ticket at the door. Photos you pick from your gallery come through Android's photo picker, so the app never gets access to the rest of your photos.</li>
+            <li>If you allow it, your device's location, once, to pin your store on the map for riders. The Vendor app does not track your location.</li>
             <li>Your bank account (bank, account number and account name), which we check with Paystack before paying out.</li>
             <li>Any information you give us to verify you or your business, and your sales and payout history.</li>
           </ul>
